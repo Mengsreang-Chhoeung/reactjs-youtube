@@ -1,0 +1,41 @@
+nav {
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav > a.logo {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 6px;
+    display: block;
+    padding: 10px;
+}
+
+nav > a.logo:hover {
+    background-color: #dedede;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 4px;
+}
+
+nav > ul > li > a:hover {
+    background-color: #dedede;
+}
