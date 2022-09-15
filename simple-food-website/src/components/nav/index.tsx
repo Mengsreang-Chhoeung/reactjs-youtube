@@ -3,26 +3,51 @@ import "./index.css";
 
 interface NavProps {}
 
+const menubar = [
+  {
+    link: "#about",
+    label: "About",
+  },
+  {
+    link: "#menu",
+    label: "Menu",
+  },
+  {
+    link: "#contact",
+    label: "Contact",
+  },
+];
+
 const Nav: React.FC<NavProps> = (props) => {
-    const {} = props;
+  const {} = props;
 
-    return (
-        <nav>
-            <a href="#" className="logo">Food Website</a>
+  return (
+    <nav>
+      <a href="#" className="logo">
+        Food Website
+      </a>
 
-            <ul>
+      {/* <ul>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#">Menu</a>
+                    <a href="#menu">Menu</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
-            </ul>
-        </nav>
-    )
-}
+            </ul> */}
+
+      <ul>
+        {menubar.map((item, index) => (
+          <li key={index}>
+            <a href={item.link}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 export default Nav;
