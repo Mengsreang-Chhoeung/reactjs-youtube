@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import DefaultLayout from "../layout/DefaultLayout";
 import Nav from "../nav";
+import Hero from "../hero";
 
 const App: React.FC = () => {
   return (
@@ -10,8 +11,11 @@ const App: React.FC = () => {
       <Nav />
       {/* End of Nav */}
 
-      {/* Hero */}
-      {/* End of Hero */}
+      <div className="content">
+        {/* Hero */}
+        <Hero />
+        {/* End of Hero */}
+      </div>
 
       {/* About */}
       {/* End of About */}

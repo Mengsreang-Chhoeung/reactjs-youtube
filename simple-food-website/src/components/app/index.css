@@ -11,3 +11,14 @@ body {
     background-color: #fff;
     color: #333;
 }
+
+.container > .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > .content > div {
+    width: 80%;
+}
