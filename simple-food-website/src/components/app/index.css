@@ -22,3 +22,7 @@ body {
 .container > .content > div {
     width: 80%;
 }
+
+.container > .content > div.inside-content {
+    width: 60%;
+}
