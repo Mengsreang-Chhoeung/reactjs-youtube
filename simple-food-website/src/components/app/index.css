@@ -1,28 +1,34 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
 }
 
 .container > .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container > .content > div {
-    width: 80%;
+  width: 80%;
 }
 
 .container > .content > div.inside-content {
-    width: 60%;
+  width: 60%;
+}
+
+.line {
+  width: 100%;
+  height: 0.1px;
+  background-color: #dbdbdb;
 }

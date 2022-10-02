@@ -1,4 +1,22 @@
 .container {
+  width: 100%;
+  position: relative;
+}
+
+.image-with-article-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 120px 30px;
+  gap: 50px;
+}
+
+.image-with-article-layout > .image,
+.image-with-article-layout > .article {
+    width: 50%;
+}
+
+.image-with-article-layout > .image > img {
     width: 100%;
-    position: relative;
+    border-radius: 10px;
 }
