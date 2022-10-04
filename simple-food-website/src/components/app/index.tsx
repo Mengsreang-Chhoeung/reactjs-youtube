@@ -5,6 +5,7 @@ import Nav from "../nav";
 import Hero from "../hero";
 import About from "../about";
 import OurMenu from "../our-menu";
+import Contact from "../contact";
 
 const App: React.FC = () => {
   return (
@@ -28,11 +29,14 @@ const App: React.FC = () => {
           {/* Menu */}
           <OurMenu />
           {/* End of Menu */}
+
+          <div className="line"></div>
+
+          {/* Contact */}
+          <Contact />
+          {/* End of Contact */}
         </div>
       </div>
-
-      {/* Contact */}
-      {/* End of Contact */}
 
       {/* Footer */}
       {/* End of Footer */}
