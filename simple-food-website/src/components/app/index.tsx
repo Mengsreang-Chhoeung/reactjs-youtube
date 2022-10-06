@@ -6,6 +6,7 @@ import Hero from "../hero";
 import About from "../about";
 import OurMenu from "../our-menu";
 import Contact from "../contact";
+import Footer from "../footer";
 
 const App: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const App: React.FC = () => {
       </div>
 
       {/* Footer */}
+      <Footer />
       {/* End of Footer */}
     </DefaultLayout>
   );
