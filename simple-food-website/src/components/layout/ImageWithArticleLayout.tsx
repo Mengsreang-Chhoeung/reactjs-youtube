@@ -5,15 +5,16 @@ interface ImageWithArticleLayoutProps {
   image: string;
   children: React.ReactNode;
   imageStayLeft?: boolean;
+  id?: string;
 }
 
 const ImageWithArticleLayout: React.FC<ImageWithArticleLayoutProps> = (
   props
 ) => {
-  const { image, children, imageStayLeft = true } = props;
+  const { image, children, imageStayLeft = true, id } = props;
 
   return (
-    <div className="image-with-article-layout">
+    <div className="image-with-article-layout" id={id}>
       {imageStayLeft ? (
         <>
           <div className="image">

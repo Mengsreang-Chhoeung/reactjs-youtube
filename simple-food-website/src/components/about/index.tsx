@@ -8,7 +8,7 @@ const About: React.FC<AboutProps> = (props) => {
   const {} = props;
 
   return (
-    <ImageWithArticleLayout image="/img/about.jpg">
+    <ImageWithArticleLayout image="/img/about.jpg" id="#about">
       <h1 className="big-title">About Catering</h1>
       <p className="small-title">Tradition since 1889</p>
       <p className="p-normal">
