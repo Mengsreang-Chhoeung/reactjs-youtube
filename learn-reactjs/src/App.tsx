@@ -1,7 +1,13 @@
+import Greeting from "./components/Greeting";
+
 function App() {
   return (
     <div>
-      <h1>Hello React!</h1>
+      <Greeting />
+      <Greeting />
+      <Greeting />
+      <Greeting />
+      <Greeting />
     </div>
   )
 }
