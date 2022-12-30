@@ -1,4 +1,4 @@
-import Greeting from "./components/Greeting";
+import Greeting, { Greeting1, Greeting2 } from "./components/Greeting";
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
       <Greeting />
       <Greeting />
       <Greeting />
+      <Greeting1 />
+      <Greeting2 />
     </div>
   )
 }
