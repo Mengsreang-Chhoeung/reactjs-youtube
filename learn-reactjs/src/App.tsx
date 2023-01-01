@@ -1,4 +1,5 @@
 import Greeting, { Greeting1, Greeting2 } from "./components/Greeting";
+import TestJSX from "./components/TestJSX";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Greeting />
       <Greeting1 />
       <Greeting2 />
+      <TestJSX />
     </div>
   )
 }
