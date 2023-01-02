@@ -1,3 +1,6 @@
+import { CSSProperties } from "react";
+import "./style.css";
+
 const name = "React";
 const greetingTitle = "JavaScript";
 
@@ -14,6 +17,12 @@ const myObject: MyObject = {
 }
 
 function TestJSX() {
+
+  const myInternalCss: CSSProperties = {
+    backgroundColor: "blue",
+    color: "white"
+  };
+
   return (
     <>
       <h1>
@@ -26,6 +35,18 @@ function TestJSX() {
         <li>Name: {myObject.name.toUpperCase()}</li>
         <li>Position: {myObject.position}</li>
       </ul>
+
+
+      {/* Inline CSS */}
+      <h1
+        style={{ backgroundColor: "red", color: "white" }}
+      >Hello CSS</h1>
+
+      {/* Internal CSS */}
+      <h1 style={myInternalCss}>Hello Internal CSS</h1>
+
+      {/* External CSS */}
+      <h1 id="external-css">Hello External CSS</h1>
     </>
   );
 }
