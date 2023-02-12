@@ -19,7 +19,8 @@ function App() {
       <TestProps h1Description={"Hello React"} /> */}
       {/* <TestProps2 />
       <TestProps2 source="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" /> */}
-      <TestProps3 title={"Article 1"}>
+      <h1 style={{ color: 'red' }}>Hello World</h1>
+      <TestProps3 style={{ color: 'red' }} styleTitle={{ color: 'blue' }} title={"Article 1"}>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio necessitatibus vitae ipsa, beatae nobis provident reprehenderit fugit, impedit quo consequatur totam accusantium deserunt. Sunt, natus.
       </TestProps3>
       <TestProps3 title={"Article 2"}>
