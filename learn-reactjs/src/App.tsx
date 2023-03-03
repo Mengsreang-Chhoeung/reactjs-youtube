@@ -1,3 +1,4 @@
+import Item from "./components/ConditionalRendering";
 import Greeting, { Greeting1, Greeting2 } from "./components/Greeting";
 import TestJSX from "./components/TestJSX";
 import TestProps from "./components/TestProps";
@@ -31,7 +32,14 @@ function App() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis id dicta error expedita perspiciatis hic, nostrum fugiat aut facere quisquam amet molestias ipsum alias adipisci laboriosam quos voluptatum vitae saepe magnam corrupti. Eum distinctio quasi maxime sint id omnis!
       </TestProps3> */}
 
-      <Button style={{ backgroundColor: "red" }} />
+      {/* <Button style={{ backgroundColor: "red" }} /> */}
+
+
+      <ul>
+        <Item name={"Space suit"} isPacked={true} />
+        <Item name={"Helmet with a golden leaf"} isPacked={true} />
+        <Item name={"Photo of Tam"} isPacked={false} />
+      </ul>
     </div>
   )
 }
