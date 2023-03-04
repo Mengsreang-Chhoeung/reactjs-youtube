@@ -25,13 +25,26 @@ interface ItemProps {
 //   return <li>{name}</li>;
 // };
 
-// using ternary operator
+// using ternary operator (? ... : ...)
+// const Item: React.FC<ItemProps> = (props) => {
+//   const { name, isPacked } = props;
+
+//   // return <li>{name} {isPacked ? "✅" : "" }</li>;
+
+//   return isPacked ? null : <li>{name}</li>;
+// };
+
+// using logical AND operator (&&)
 const Item: React.FC<ItemProps> = (props) => {
   const { name, isPacked } = props;
 
-  // return <li>{name} {isPacked ? "✅" : "" }</li>;
+  // return <li>{name} {isPacked && "✅"}</li>;
 
-  return isPacked ? null : <li>{name}</li>;
+  return <>
+    {
+      !isPacked && <li>{name}</li>
+    }
+  </>;
 };
 
 export default Item;
