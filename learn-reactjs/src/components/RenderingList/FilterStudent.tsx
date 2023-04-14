@@ -45,7 +45,7 @@ const FilterStudent: React.FC = () => {
       {studentObject
         .filter((it) => it.grade === 10)
         .map((it) => (
-          <div>
+          <div key={it.id}>
             <p>ID: {it.id}</p>
             <p>Name: {it.name}</p>
             <p>Grade: {it.grade}</p>
