@@ -1,5 +1,6 @@
 import Item from "./components/ConditionalRendering";
 import Greeting, { Greeting1, Greeting2 } from "./components/Greeting";
+import FilterStudent from "./components/RenderingList/FilterStudent";
 import People from "./components/RenderingList/People";
 import Student from "./components/RenderingList/Student";
 import TestJSX from "./components/TestJSX";
@@ -44,7 +45,9 @@ function App() {
 
       {/* <People /> */}
 
-      <Student />
+      {/* <Student /> */}
+
+      <FilterStudent />
     </div>
   );
 }
