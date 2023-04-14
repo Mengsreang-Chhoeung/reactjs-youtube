@@ -1,5 +1,6 @@
 import Item from "./components/ConditionalRendering";
 import Greeting, { Greeting1, Greeting2 } from "./components/Greeting";
+import People from "./components/RenderingList/People";
 import TestJSX from "./components/TestJSX";
 import TestProps from "./components/TestProps";
 import TestProps2 from "./components/TestProps/index2";
@@ -34,14 +35,15 @@ function App() {
 
       {/* <Button style={{ backgroundColor: "red" }} /> */}
 
-
-      <ul>
+      {/* <ul>
         <Item name={"Space suit"} isPacked={true} />
         <Item name={"Helmet with a golden leaf"} isPacked={true} />
         <Item name={"Photo of Tam"} isPacked={false} />
-      </ul>
+      </ul> */}
+
+      <People />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
