@@ -3,6 +3,7 @@ import Greeting, { Greeting1, Greeting2 } from "./components/Greeting";
 import FilterStudent from "./components/RenderingList/FilterStudent";
 import People from "./components/RenderingList/People";
 import Student from "./components/RenderingList/Student";
+import StateDemo from "./components/State";
 import TestJSX from "./components/TestJSX";
 import TestProps from "./components/TestProps";
 import TestProps2 from "./components/TestProps/index2";
@@ -47,7 +48,9 @@ function App() {
 
       {/* <Student /> */}
 
-      <FilterStudent />
+      {/* <FilterStudent /> */}
+
+      <StateDemo />
     </div>
   );
 }
