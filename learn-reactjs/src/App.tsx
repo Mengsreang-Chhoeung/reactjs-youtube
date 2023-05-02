@@ -4,6 +4,7 @@ import FilterStudent from "./components/RenderingList/FilterStudent";
 import People from "./components/RenderingList/People";
 import Student from "./components/RenderingList/Student";
 import StateDemo from "./components/State";
+import ObjectState from "./components/State/Object";
 import TestJSX from "./components/TestJSX";
 import TestProps from "./components/TestProps";
 import TestProps2 from "./components/TestProps/index2";
@@ -50,7 +51,9 @@ function App() {
 
       {/* <FilterStudent /> */}
 
-      <StateDemo />
+      {/* <StateDemo /> */}
+
+      <ObjectState />
     </div>
   );
 }
