@@ -21,26 +21,6 @@ const ObjectState: React.FC = () => {
     },
   });
 
-  console.log("Hello Student Data: ", studentData);
-
-  const handleIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === "" ? "0" : e.target.value;
-    setStudentData({ ...studentData, id: parseInt(value) });
-  };
-
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === "" ? "n/a" : e.target.value;
-    setStudentData({ ...studentData, name: value });
-  };
-
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === "" ? "n/a" : e.target.value;
-    setStudentData({
-      ...studentData,
-      contact: { ...studentData.contact, phone: value },
-    });
-  };
-
   const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value === "" ? "n/a" : e.target.value;
     setStudentData({
@@ -49,23 +29,46 @@ const ObjectState: React.FC = () => {
     });
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let result: StudentType = { ...studentData };
+    const name = e.target.name;
+    const value = e.target.value === "" ? "n/a" : e.target.value;
+
+    if (name.startsWith("contact")) {
+      result = {
+        ...result,
+        contact: {
+          ...result.contact,
+          [name.split(".")[1]]: value,
+        },
+      };
+    } else {
+      result = {
+        ...result,
+        [name]: value,
+      };
+    }
+
+    setStudentData(result);
+  };
+
   return (
     <div>
       <div>
         <label htmlFor="id">ID: </label>
-        <input type="number" onChange={handleIdChange} />
+        <input name="id" type="number" onChange={handleChange} />
       </div>
       <div>
         <label htmlFor="name">Name: </label>
-        <input type="text" onChange={handleNameChange} />
+        <input name="name" type="text" onChange={handleChange} />
       </div>
       <div>
         <label htmlFor="phone">Phone: </label>
-        <input type="text" onChange={handlePhoneChange} />
+        <input name="contact.phone" type="text" onChange={handleChange} />
       </div>
       <div>
         <label htmlFor="address">Address: </label>
-        <input type="text" onChange={handleAddressChange} />
+        <input name="contact.address" type="text" onChange={handleChange} />
       </div>
 
       <br />
