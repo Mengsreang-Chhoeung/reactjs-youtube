@@ -21,14 +21,6 @@ const ObjectState: React.FC = () => {
     },
   });
 
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value === "" ? "n/a" : e.target.value;
-    setStudentData({
-      ...studentData,
-      contact: { ...studentData.contact, address: value },
-    });
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let result: StudentType = { ...studentData };
     const name = e.target.name;
