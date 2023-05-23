@@ -32,9 +32,14 @@ const ArrayState: React.FC = () => {
 
       <button
         onClick={() => {
+          // setStudentListData([
+          //   ...studentListData,
+          //   { id: studentData?.id, name: studentData?.name },
+          // ]);
+
           setStudentListData([
-            ...studentListData,
             { id: studentData?.id, name: studentData?.name },
+            ...studentListData,
           ]);
         }}
       >
