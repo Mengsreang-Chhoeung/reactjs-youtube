@@ -51,11 +51,20 @@ const ArrayState: React.FC = () => {
 
       <div>Result:</div>
       <div>
-        {studentListData.map((it, index) => (
-          <React.Fragment key={index}>
+        {studentListData.map((it) => (
+          <React.Fragment key={it.id}>
             <hr />
             <div>ID: {it?.id}</div>
             <div>Name: {it?.name}</div>
+            <button
+              onClick={() => {
+                setStudentListData(
+                  studentListData.filter((ite) => ite.id !== it.id)
+                );
+              }}
+            >
+              Delete
+            </button>
           </React.Fragment>
         ))}
       </div>
