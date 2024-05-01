@@ -12,6 +12,7 @@ import TestProps2 from "./components/TestProps/index2";
 import TestProps3 from "./components/TestProps/index3";
 import Button from "./components/TestProps/index4";
 import DeclarativelyUi from "./components/DeclarativelyUi";
+import ParentComponent from "./components/PropsInState/ParentComponent";
 
 function App() {
   return (
@@ -59,7 +60,9 @@ function App() {
 
       {/* <ArrayState /> */}
 
-      <DeclarativelyUi />
+      {/* <DeclarativelyUi /> */}
+
+      <ParentComponent />
     </div>
   );
 }
