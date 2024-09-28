@@ -13,6 +13,7 @@ import TestProps3 from "./components/TestProps/index3";
 import Button from "./components/TestProps/index4";
 import DeclarativelyUi from "./components/DeclarativelyUi";
 import ParentComponent from "./components/PropsInState/ParentComponent";
+import TravelPlan from "./components/NestedState/TravelPlan";
 
 function App() {
   return (
@@ -62,7 +63,9 @@ function App() {
 
       {/* <DeclarativelyUi /> */}
 
-      <ParentComponent />
+      {/* <ParentComponent /> */}
+
+      <TravelPlan />
     </div>
   );
 }
