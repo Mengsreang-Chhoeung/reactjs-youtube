@@ -14,6 +14,7 @@ import Button from "./components/TestProps/index4";
 import DeclarativelyUi from "./components/DeclarativelyUi";
 import ParentComponent from "./components/PropsInState/ParentComponent";
 import TravelPlan from "./components/NestedState/TravelPlan";
+import Accordion from "./components/SharingStateBetweenComponents/Accordion";
 
 function App() {
   return (
@@ -65,7 +66,9 @@ function App() {
 
       {/* <ParentComponent /> */}
 
-      <TravelPlan />
+      {/* <TravelPlan /> */}
+
+      <Accordion />
     </div>
   );
 }
