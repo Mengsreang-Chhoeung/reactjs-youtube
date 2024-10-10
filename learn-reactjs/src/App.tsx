@@ -15,6 +15,7 @@ import DeclarativelyUi from "./components/DeclarativelyUi";
 import ParentComponent from "./components/PropsInState/ParentComponent";
 import TravelPlan from "./components/NestedState/TravelPlan";
 import Accordion from "./components/SharingStateBetweenComponents/Accordion";
+import TaskApp from "./components/TaskApp";
 
 function App() {
   return (
@@ -68,7 +69,9 @@ function App() {
 
       {/* <TravelPlan /> */}
 
-      <Accordion />
+      {/* <Accordion /> */}
+
+      <TaskApp />
     </div>
   );
 }
