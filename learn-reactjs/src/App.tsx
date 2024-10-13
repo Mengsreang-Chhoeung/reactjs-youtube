@@ -16,6 +16,7 @@ import ParentComponent from "./components/PropsInState/ParentComponent";
 import TravelPlan from "./components/NestedState/TravelPlan";
 import Accordion from "./components/SharingStateBetweenComponents/Accordion";
 import TaskApp from "./components/TaskApp";
+import Level from "./components/LevelContext";
 
 function App() {
   return (
@@ -71,7 +72,9 @@ function App() {
 
       {/* <Accordion /> */}
 
-      <TaskApp />
+      {/* <TaskApp /> */}
+
+      <Level />
     </div>
   );
 }
