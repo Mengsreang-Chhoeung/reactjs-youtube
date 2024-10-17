@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LevelContext } from "./context/levelContext";
+import { LevelContext, useLevelContext } from "./context/levelContext";
 
 interface HeadingProps {
   children: React.ReactNode;
@@ -7,7 +7,8 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = (props) => {
   const { children } = props;
-  const level = useContext(LevelContext);
+  // const level = useContext(LevelContext);
+  const level = useLevelContext();
 
   console.log("hello level: ", level);
 

@@ -4,9 +4,9 @@ import Heading from "./Heading";
 import { LevelContext } from "./context/levelContext";
 
 const Level: React.FC = () => {
-  const level = useContext(LevelContext);
+  // const level = useContext(LevelContext);
 
-  console.log("Hi ll: ", level);
+  // console.log("Hi ll: ", level);
 
   return (
     <Section>

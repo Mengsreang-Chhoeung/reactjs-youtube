@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { LevelContext } from "./context/levelContext";
+import React from "react";
+import { LevelContextProvider, useLevelContext } from "./context/levelContext";
 
 interface SectionProps {
   children: React.ReactNode;
@@ -7,7 +7,8 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = (props) => {
   const { children } = props;
-  const level = useContext(LevelContext);
+  // const level = useContext(LevelContext);
+  // const level = useLevelContext();
 
   return (
     <section
@@ -17,9 +18,10 @@ const Section: React.FC<SectionProps> = (props) => {
         padding: "10px",
       }}
     >
-      <LevelContext.Provider value={level + 1}>
+      {/* <LevelContext.Provider value={level + 1}>
         {children}
-      </LevelContext.Provider>
+      </LevelContext.Provider> */}
+      <LevelContextProvider>{children}</LevelContextProvider>
     </section>
   );
 };
