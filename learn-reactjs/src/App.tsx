@@ -17,6 +17,7 @@ import TravelPlan from "./components/NestedState/TravelPlan";
 import Accordion from "./components/SharingStateBetweenComponents/Accordion";
 import TaskApp from "./components/TaskApp";
 import Level from "./components/LevelContext";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -74,7 +75,9 @@ function App() {
 
       {/* <TaskApp /> */}
 
-      <Level />
+      {/* <Level /> */}
+
+      <Counter />
     </div>
   );
 }
