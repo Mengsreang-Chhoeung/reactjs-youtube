@@ -18,6 +18,7 @@ import Accordion from "./components/SharingStateBetweenComponents/Accordion";
 import TaskApp from "./components/TaskApp";
 import Level from "./components/LevelContext";
 import Counter from "./components/Counter";
+import TaskApp2 from "./components/TaskApp2";
 
 function App() {
   return (
@@ -77,7 +78,9 @@ function App() {
 
       {/* <Level /> */}
 
-      <Counter />
+      {/* <Counter /> */}
+
+      <TaskApp2 />
     </div>
   );
 }
