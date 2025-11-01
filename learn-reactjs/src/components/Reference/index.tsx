@@ -1,16 +1,38 @@
-import React, { useRef } from "react";
+import React, { useRef, forwardRef, useImperativeHandle } from "react";
+
+interface MyInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface MyInputRef {
+  focus: () => void;
+}
+
+// const MyInput = forwardRef<HTMLInputElement, MyInputProps>((props, ref) => (
+//   <input {...props} ref={ref} />
+// ));
+
+const MyInput = forwardRef<MyInputRef, MyInputProps>((props, ref) => {
+  const realInputRef = useRef<HTMLInputElement | null>(null);
+  useImperativeHandle(ref, () => ({
+    // Only expose focus and nothing else
+    focus() {
+      realInputRef.current?.focus();
+    },
+  }));
+
+  return <input {...props} ref={realInputRef} />;
+});
 
 const ReferenceApp: React.FC = () => {
-  const inputRef = useRef(null);
+  const inputRef = useRef<MyInputRef | null>(null);
 
   return (
     <div>
-      <input ref={inputRef} />
+      <MyInput ref={inputRef} />
       <button
         onClick={() => {
-          //   console.log("Hello Ref: ", inputRef.current);
-          // @ts-ignore
-          inputRef.current.focus();
+          if (inputRef.current) {
+            inputRef.current.focus();
+            // inputRef.current.style.backgroundColor = "red";
+          }
         }}
       >
         Focus
