@@ -20,6 +20,7 @@ import Level from "./components/LevelContext";
 import Counter from "./components/Counter";
 import TaskApp2 from "./components/TaskApp2";
 import ReferenceApp from "./components/Reference";
+import EffectApp from "./components/Effect";
 
 function App() {
   return (
@@ -83,7 +84,9 @@ function App() {
 
       {/* <TaskApp2 /> */}
 
-      <ReferenceApp />
+      {/* <ReferenceApp /> */}
+
+      <EffectApp />
     </div>
   );
 }
